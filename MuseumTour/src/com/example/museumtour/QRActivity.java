@@ -29,7 +29,7 @@ public class QRActivity extends Activity {
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.main);
+		setContentView(R.layout.activity_main);
 
 		format=(TextView)findViewById(R.id.format);
 		contents=(TextView)findViewById(R.id.contents);
