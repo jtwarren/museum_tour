@@ -3,17 +3,23 @@ package com.example.museumtour;
 import java.util.Arrays;
 import java.util.List;
 
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
+
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	Spinner museumSelectionSpinner;
 	String[] museums = {"MIT Museum"};
+	TextView contents=null;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +27,7 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.activity_main);
 		
 		populateMuseumSelectionList(Arrays.asList(museums));
+		contents=(TextView)findViewById(R.id.contents);
 	}
 
 	@Override
@@ -47,6 +54,19 @@ public class MainActivity extends Activity {
 		findViewById(R.id.map).setVisibility(1);
 
 
+	}
+	
+	public void doScan(View v) {
+		(new IntentIntegrator(this)).initiateScan();
+	}
+	
+	public void onActivityResult(int request, int result, Intent i) {
+		IntentResult scan=IntentIntegrator.parseActivityResult(request, result, i);
+
+		if (scan!=null) {
+//			format.setText(scan.getFormatName());
+			contents.setText(scan.getContents());
+		}
 	}
 
 }
