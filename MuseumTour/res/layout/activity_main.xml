@@ -53,5 +53,21 @@
         android:layout_alignTop="@+id/welcome"
         android:src="@drawable/floor_2_map_marked"
         android:visibility="invisible" />
+    
+    <Button
+	    android:id="@+id/button1"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_alignParentBottom="true"
+	    android:layout_centerHorizontal="true"
+	    android:layout_marginBottom="9dp"
+	    android:onClick="doScan"
+	    android:text="Scan QR Code"
+	/>
+    
+    <TextView android:id="@+id/contents"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+  />
 
 </RelativeLayout>
