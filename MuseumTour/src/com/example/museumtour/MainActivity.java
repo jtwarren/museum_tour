@@ -14,6 +14,7 @@ import android.widget.Spinner;
 public class MainActivity extends Activity {
 	Spinner museumSelectionSpinner;
 	String[] museums = {"MIT Museum"};
+	ImageView map;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,12 +42,13 @@ public class MainActivity extends Activity {
 	  }
 	
 	public void beginTour(View view){
-		museumSelectionSpinner.setVisibility(0);
-		findViewById(R.id.welcome).setVisibility(0);
-		findViewById(R.id.museumSelection).setVisibility(0);
-		findViewById(R.id.map).setVisibility(1);
-
-
+		museumSelectionSpinner.setVisibility(View.GONE);
+		findViewById(R.id.welcome).setVisibility(View.GONE);
+		findViewById(R.id.museumSelection).setVisibility(View.GONE);
+		map = (ImageView) findViewById(R.id.map);
+		map.setVisibility(1);
+		map.setImageResource(R.drawable.map1);
 	}
 
+	
 }

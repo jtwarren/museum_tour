@@ -27,7 +27,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="Welcome!"
-        android:textSize="25sp" />
+        android:textSize="25sp"
+        android:visibility="visible" />
 
     <TextView
         android:id="@+id/museumSelection"
@@ -50,6 +51,8 @@
         android:id="@+id/map"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/museumSelectionSpinner"
+        android:layout_alignParentRight="true"
         android:layout_alignTop="@+id/welcome"
         android:src="@drawable/floor_2_map_marked"
         android:visibility="invisible" />
