@@ -56,5 +56,21 @@
         android:layout_alignTop="@+id/welcome"
         android:src="@drawable/floor_2_map_marked"
         android:visibility="invisible" />
+    
+    <TextView android:id="@+id/contents"
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+  />
+
+    <ImageButton
+        android:id="@+id/scanButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_toRightOf="@+id/museumSelection"
+        android:background="@android:color/transparent"
+        android:onClick="doScan"
+        android:src="@drawable/scan_icon"
+        android:visibility="invisible" />
 
 </RelativeLayout>
