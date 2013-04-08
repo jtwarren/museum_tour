@@ -32,7 +32,7 @@ public class MapActivity extends Activity {
 		
 		
 		Intent intent = new Intent(this, ExhibitActivity.class);
-	    intent.putExtra("EXHIBIT_URL", message);
+	    intent.putExtra("EXHIBIT_NAME", "bionic");
 		startActivity(intent);
 	}
 	

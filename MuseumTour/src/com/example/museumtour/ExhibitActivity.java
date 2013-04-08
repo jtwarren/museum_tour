@@ -12,6 +12,7 @@ public class ExhibitActivity extends Activity {
 
 	    // Get the message from the intent
 	    Intent intent = getIntent();
+	    String exhibitName = intent.getStringExtra("EXHIBIT_NAME");
 	    setContentView(R.layout.exhibit);
 	}
 }
