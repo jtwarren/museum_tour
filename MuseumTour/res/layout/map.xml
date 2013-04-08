@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
-        android:src="@drawable/floor_2_map_marked"/>
+        android:src="@drawable/map_default"/>
     
     <TextView android:id="@+id/contents"
 	    android:layout_width="fill_parent" 
