@@ -25,11 +25,13 @@ public class MainActivity extends Activity {
 	ListView list;
     ExhibitListAdapter adapter;
 	TextView contents=null;
-	String[] pics = {"MuseumTour/res/drawable-mdpi/exhibit-photos/academic1.jpg"};
 	Map<Integer, Integer> CURRENT_LOCATION_MAP = new HashMap<Integer, Integer>();
 	static Map<Integer, Integer> EXHIBIT_IMAGES = new HashMap<Integer, Integer>();
 	Resources res;
-	static String[] exhibitText;
+	static String[] EXHIBIT_TEXT;
+	static String[] EXHIBIT_NAMES;
+	static String[] SHORT_EXHIBIT_NAMES;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -38,27 +40,18 @@ public class MainActivity extends Activity {
 		populateMuseumSelectionList(Arrays.asList(museums));
 		contents=(TextView)findViewById(R.id.contents);
 		res = getResources();
-		loadData();
+		
 		
 		list=(ListView)findViewById(R.id.listView1);
-        adapter=new ExhibitListAdapter(res, this);
+        adapter=new ExhibitListAdapter(this);
         list.setAdapter(adapter);
         list.setClickable(true);
-        exhibitText = res.getStringArray(R.array.exhibit_text);
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-          @Override
-          public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-        	  TextView exhibitInfo = (TextView) findViewById(R.id.exhibitInfo);
-        	  exhibitInfo.setText(exhibitText[position]);
-        	  exhibitInfo.setMovementMethod(new ScrollingMovementMethod());
-        	  ImageView exhibitPic = (ImageView) findViewById(R.id.exhibitPic);
-        	  exhibitPic.setImageResource(EXHIBIT_IMAGES.get(position));
-        	  ListView list = (ListView) findViewById(R.id.listView1);
-        	  list.setVisibility(View.GONE);
-        	  exhibitInfo.setVisibility(1);
-        	  exhibitPic.setVisibility(1);
-          }
-        });
+        
+        EXHIBIT_TEXT = res.getStringArray(R.array.exhibit_text);
+        EXHIBIT_NAMES = res.getStringArray(R.array.exhibit_names);
+        SHORT_EXHIBIT_NAMES = res.getStringArray(R.array.short_exhibit_names);
+        loadData();
+        
 	}
 
 	@Override
@@ -109,6 +102,31 @@ public class MainActivity extends Activity {
 		EXHIBIT_IMAGES.put(2, R.drawable.academic2);
 		EXHIBIT_IMAGES.put(3, R.drawable.academic3);
 		EXHIBIT_IMAGES.put(4, R.drawable.academic4);
+		
+		
+		list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+	          @Override
+	          public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
+	        	  
+	        	  TextView exhibitInfo = (TextView) findViewById(R.id.exhibitInfo);
+	        	  exhibitInfo.setText(EXHIBIT_TEXT[position]);
+	        	  exhibitInfo.setMovementMethod(new ScrollingMovementMethod());
+	        	  
+	        	  ImageView exhibitPic = (ImageView) findViewById(R.id.exhibitPic);
+	        	  exhibitPic.setImageResource(EXHIBIT_IMAGES.get(position));
+	        	  
+	        	  TextView exhibitTitle = (TextView) findViewById(R.id.exhibitTitle);
+	        	  exhibitTitle.setText(EXHIBIT_NAMES[position]);
+	        	  
+	        	  ListView list = (ListView) findViewById(R.id.listView1);
+	        	  
+	        	  list.setVisibility(View.GONE);
+	        	  exhibitInfo.setVisibility(1);
+	        	  exhibitPic.setVisibility(1);
+	        	  exhibitTitle.setVisibility(1);
+	        	  
+	          }
+	        });
 
 	}
 	
