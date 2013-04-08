@@ -4,12 +4,62 @@
     <string name="app_name">Museum Tour</string>
     <string name="action_settings">Settings</string>
     <string name="hello_world">Hello world!</string>
+    <string-array name="short_exhibit_names">
+        <item >Scratch</item>
+        <item >Room 10-250</item>
+        <item >UROP</item>
+        <item >Independent Activities Period</item>
+        <item >2.70/2.007 MIT\'s Most Famous Class</item>
+        <item >Google App Inventor</item>
+        <item >GNU Manifesto</item>
+        <item >MIT Project Athena</item>
+        <item >Theseus Maze</item>
+        <item >Ray and Maria Stata Center</item>
+        <item >Parker\'s Plasma Sculptures</item>
+        <item >Digital Holography</item>
+        <item >MIT Glass Lab</item>
+        <item >LeWitt\'s Bars of Color within Squares</item>
+        <item >Artificial "Skin"</item>
+        <item >H.M.\'s Brain</item>
+        <item >PowerFoot One Prosthetic Foot</item>
+        <item >"Minksy Arm"</item>
+        <item >Boston\s Central Artery/Tunnel Plan</item>
+        <item >Boston Chinatown Master Plan</item>
+        <item >Perceptual Form of the City</item>
+        <item >Charles River as Research Lab</item>
+        <item >Boston Wind Tunnel Studies</item>
+        <item >OpenCourseWare</item>
+        <item >Compton Lecture Series</item>
+        <item >MIT Science Reporter</item>
+        <item >MIT Press\' Most Influential Works</item>
+        <item >MIT\'s World\'s Fair Photographic Albums</item>
+        <item >MIT $100K Competition</item>
+        <item >One Laptop per Child</item>
+        <item >SR-4 Strain Gauge</item>
+        <item >MIT Sloan Fellows</item>
+        <item >Perfect Cup of Coffee Research</item>
+        <item >Whitehead Human Genome Project</item>
+        <item >Edgerton\'s High-Speed Pictures</item>
+        <item >Van de Graaff Generators</item>
+        <item >Feynman Diagrams</item>
+        <item >Chomsky\'s Elements of Linguistic Structure</item>
+        <item >CityCar Electric Vehicle</item>
+        <item >Protein Folding</item>
+        <item >Cancer Research</item>
+        <item >MIT Nuclear Research Reactor</item>
+        <item >Copenhagen Wheel</item>
+        <item >"IHTFP"</item>
+        <item >MIT\'s Living Groups</item>
+        <item >Baker House Piano Drop</item>
+        <item >Hacking - The Smoot</item>
+        <item >MIT Class of 2011 Brass Rat</item>
+    </string-array>
     <string-array name="exhibit_names">
         <item >Scratch, Mitchel Resnick, MIT Media Laboratory Lifelong Kindergarten Group, 2007</item>
         <item >Original Seats from Room 10-250, MIT\'s Most Famous Lecture Hall, 1916–1977</item>
         <item >Undergraduate Research Opportunities Program (UROP), 1969—Present</item>
         <item >IAP’s Most Famous Class: “How to Gamble If You Will” (Training Grounds for the MIT Blackjack Team), 1979</item>
-        <item >2.70\2.007 MIT\'s Most Famous Class, 1970–Present</item>
+        <item >2.70/2.007 MIT\'s Most Famous Class, 1970–Present</item>
         <item >Google App Inventor, Hal Abelson, 2010</item>
         <item >GNU Manifesto, Richard Stallman, 1985</item>
     	<item >MIT Project Athena, 1983–1991</item>

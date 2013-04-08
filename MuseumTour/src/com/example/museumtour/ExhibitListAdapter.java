@@ -42,7 +42,7 @@ public class ExhibitListAdapter extends BaseAdapter {
     
     public View getView(int position, View convertView, ViewGroup parent) {
     	
-    	String[] exhibit_names = res.getStringArray(R.array.exhibit_names);
+    	String[] exhibit_names = res.getStringArray(R.array.short_exhibit_names);
         View vi = convertView;
         if(convertView==null)
             vi = inflater.inflate(R.layout.item, null);
