@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     android:visibility="visible"
-    tools:context=".MainActivity" >
+    tools:context=".HomeActivity" >
 
     <Button
         android:id="@+id/button1"
@@ -89,7 +89,7 @@
     <TextView
         android:id="@+id/exhibitInfo"
         android:layout_width="wrap_content"
-        android:layout_height="180dip"
+        android:layout_height="240dip"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"

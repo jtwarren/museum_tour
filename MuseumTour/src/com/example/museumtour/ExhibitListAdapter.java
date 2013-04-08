@@ -35,7 +35,7 @@ public class ExhibitListAdapter extends BaseAdapter {
     
     public void displayImage(int position, ImageView imageView){
     	
-    	imageView.setImageResource(MainActivity.EXHIBIT_IMAGES.get(position));
+    	imageView.setImageResource(HomeActivity.EXHIBIT_IMAGES.get(position));
     }
     
     public View getView(int position, View convertView, ViewGroup parent) {
@@ -45,7 +45,7 @@ public class ExhibitListAdapter extends BaseAdapter {
 
         TextView text=(TextView)vi.findViewById(R.id.text);;
         ImageView image=(ImageView)vi.findViewById(R.id.image);
-        text.setText(MainActivity.SHORT_EXHIBIT_NAMES[position]);
+        text.setText(HomeActivity.SHORT_EXHIBIT_NAMES[position]);
         displayImage(position, image);
         return vi;
     }
