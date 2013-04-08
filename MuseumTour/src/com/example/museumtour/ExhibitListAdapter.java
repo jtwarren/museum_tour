@@ -14,11 +14,9 @@ public class ExhibitListAdapter extends BaseAdapter {
     
     private Activity activity;
     private static LayoutInflater inflater=null;
-    Resources res; 
     
-    public ExhibitListAdapter(Resources res, Activity a) {
+    public ExhibitListAdapter(Activity a) {
         activity = a;
-        this.res = res;
         inflater = (LayoutInflater)activity.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
     }
 
@@ -42,14 +40,13 @@ public class ExhibitListAdapter extends BaseAdapter {
     
     public View getView(int position, View convertView, ViewGroup parent) {
     	
-    	String[] exhibit_names = res.getStringArray(R.array.exhibit_names);
         View vi = convertView;
         if(convertView==null)
             vi = inflater.inflate(R.layout.item, null);
 
         TextView text=(TextView)vi.findViewById(R.id.text);;
         ImageView image=(ImageView)vi.findViewById(R.id.image);
-        text.setText(exhibit_names[position]);
+        text.setText(MainActivity.EXHIBIT_NAMES[position]);
         displayImage(position, image);
         return vi;
     }
