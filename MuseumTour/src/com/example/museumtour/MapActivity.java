@@ -35,6 +35,4 @@ public class MapActivity extends Activity {
 	    intent.putExtra("EXHIBIT_NAME", "bionic");
 		startActivity(intent);
 	}
-	
-	public string 
 }
