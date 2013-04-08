@@ -19,7 +19,6 @@ public class MapActivity extends Activity {
 	    // Get the message from the intent
 	    Intent intent = getIntent();
 	    setContentView(R.layout.map);
-	    contents=(TextView)findViewById(R.id.contents);
 	}
 	
 	public void doScan(View v) {
@@ -28,11 +27,14 @@ public class MapActivity extends Activity {
 
 	public void onActivityResult(int request, int result, Intent i) {
 		IntentResult scan = IntentIntegrator.parseActivityResult(request, result, i);
-
-		if (scan!=null) {
-			if (scan  == "") {
-				
-			}
-		}
+		String message = scan.getContents();
+		
+		
+		
+		Intent intent = new Intent(this, ExhibitActivity.class);
+	    intent.putExtra("EXHIBIT_URL", message);
+		startActivity(intent);
 	}
+	
+	public string 
 }

@@ -12,5 +12,6 @@ public class ExhibitActivity extends Activity {
 
 	    // Get the message from the intent
 	    Intent intent = getIntent();
+	    setContentView(R.layout.exhibit);
 	}
 }

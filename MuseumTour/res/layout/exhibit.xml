@@ -8,36 +8,34 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     android:visibility="visible"
     tools:context=".ExhibitActivity" >
+    
+    <TextView
+        android:id="@+id/exhibitInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="240dip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        
+        android:scrollbars="vertical"
+        android:text="TextView"/>
 
     <ImageView
-        android:id="@+id/map"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:src="@drawable/floor_2_map_marked"/>
-    
-    <TextView android:id="@+id/contents"
-	    android:layout_width="fill_parent" 
-	    android:layout_height="wrap_content" />
-
-    <ImageButton
-        android:id="@+id/scanButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="@android:color/transparent"
-        android:onClick="doScan"
+        android:id="@+id/exhibitPic"
+        android:layout_width="200dip"
+        android:layout_height="200dip"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
         android:src="@drawable/scan_icon"/>
 
-    <ListView
-        android:id="@+id/listView1"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/exhibitTitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/contents"
-        android:layout_centerHorizontal="true" >
-
-    </ListView>
-
-
+        android:layout_below="@+id/exhibitPic"
+        android:layout_centerHorizontal="true"
+        android:text="TextView"
+        android:textSize="16dp"/>
+    
 
 </RelativeLayout>
