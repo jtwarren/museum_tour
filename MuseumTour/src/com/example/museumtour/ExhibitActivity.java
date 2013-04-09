@@ -44,6 +44,7 @@ public class ExhibitActivity extends Activity {
 	    }
 	    setContentView(R.layout.exhibit);
 	    setImagesAndText(images, shortTitles, textBlobs, longTitles);
+	    MapActivity.setExhibitVisited(exhibitIndex);
 	}
 	
 	public int getExhibitIndex(String exhibitName){
