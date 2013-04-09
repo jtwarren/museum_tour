@@ -1,22 +1,15 @@
 package com.example.museumtour;
 
-import java.util.Arrays;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
 
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.text.method.ScrollingMovementMethod;
 import android.view.Menu;
 import android.view.View;
-import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -27,7 +20,6 @@ public class HomeActivity extends Activity {
 	String[] museums = {"MIT Museum"};
 	ImageView map;
 	ListView list;
-    ExhibitListAdapter adapter;
 	TextView contents=null;
 	Map<Integer, Integer> CURRENT_LOCATION_MAP = new HashMap<Integer, Integer>();
 	static Map<Integer, Integer> EXHIBIT_IMAGES = new HashMap<Integer, Integer>();

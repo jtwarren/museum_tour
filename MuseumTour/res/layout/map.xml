@@ -20,7 +20,7 @@
     <TextView android:id="@+id/contents"
 	    android:layout_width="fill_parent" 
 	    android:layout_height="wrap_content" />
-
+    
     <ImageButton
         android:id="@+id/scanButton"
         android:layout_width="wrap_content"
@@ -40,6 +40,13 @@
 
     </ListView>
 
-
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:onClick="doProgress"
+        android:text="Progress" />
 
 </RelativeLayout>

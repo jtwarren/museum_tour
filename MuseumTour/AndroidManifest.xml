@@ -46,6 +46,14 @@
 	            android:name="android.support.PARENT_ACTIVITY"
 	            android:value="com.example.myfirstapp.ExhibitActivity" />
     	</activity>
+    	<activity
+	        android:name="com.example.museumtour.AchievementsActivity"
+	        android:label="@string/app_name"
+	        android:parentActivityName="com.example.museumtour.MapActivity" >
+	        <meta-data
+	            android:name="android.support.PARENT_ACTIVITY"
+	            android:value="com.example.myfirstapp.MapActivity" />
+    	</activity>
     </application>
 
 </manifest>

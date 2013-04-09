@@ -26,6 +26,11 @@ public class MapActivity extends Activity {
 	public void doScan(View v) {
 		(new IntentIntegrator(this)).initiateScan();
 	}
+	
+	public void doProgress(View v) {
+		Intent intent = new Intent(MapActivity.this, AchievementsActivity.class);
+		startActivity(intent);
+	}
 
 	public void onActivityResult(int request, int result, Intent i) {
 		IntentResult scan = IntentIntegrator.parseActivityResult(request, result, i);
