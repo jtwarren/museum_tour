@@ -8,7 +8,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class ExhibitActivity extends Activity {
@@ -40,7 +42,7 @@ public class ExhibitActivity extends Activity {
 	    	longTitles[i] = allLongTitles[i+exhibitIndex*5];
 	    	textBlobs[i] = allTextBlobs[i+exhibitIndex*5];
 	    }
-	    setImagesAndText(images, shortTitles);
+	    setImagesAndText(images, shortTitles, textBlobs, longTitles);
 	    setContentView(R.layout.exhibit);
 	}
 	
@@ -168,13 +170,13 @@ public class ExhibitActivity extends Activity {
 		return tempImages;
 	}
 
-	public void setImagesAndText(int[] images, String[] titles)
+	public void setImagesAndText(int[] images, String[] titles, String[] blobs, String[] longTitles)
 	{
-		ImageView image0 = (ImageView)findViewById(R.id.exhibit_image0);
-		ImageView image1 = (ImageView)findViewById(R.id.exhibit_image1);
-		ImageView image2 = (ImageView)findViewById(R.id.exhibit_image2);
-		ImageView image3 = (ImageView)findViewById(R.id.exhibit_image3);
-		ImageView image4 = (ImageView)findViewById(R.id.exhibit_image4);
+		ImageButton image0 = (ImageButton)findViewById(R.id.exhibit_image0);
+		ImageButton image1 = (ImageButton)findViewById(R.id.exhibit_image1);
+		ImageButton image2 = (ImageButton)findViewById(R.id.exhibit_image2);
+		ImageButton image3 = (ImageButton)findViewById(R.id.exhibit_image3);
+		ImageButton image4 = (ImageButton)findViewById(R.id.exhibit_image4);
 		
 		TextView title0 = (TextView)findViewById(R.id.exhibit_title0);
 		TextView title1 = (TextView)findViewById(R.id.exhibit_title1);
@@ -183,15 +185,42 @@ public class ExhibitActivity extends Activity {
 		TextView title4 = (TextView)findViewById(R.id.exhibit_title4);
 		
 		image0.setImageDrawable(getResources().getDrawable(images[0]));
+		attachClickHandler(image0, longTitles[0], blobs[0], images[0]);
 		image1.setImageDrawable(getResources().getDrawable(images[1]));
+		attachClickHandler(image0, longTitles[1], blobs[1], images[1]);
 		image2.setImageDrawable(getResources().getDrawable(images[2]));
+		attachClickHandler(image0, longTitles[2], blobs[2], images[2]);
 		image3.setImageDrawable(getResources().getDrawable(images[3]));
+		attachClickHandler(image0, longTitles[3], blobs[3], images[3]);
 		image4.setImageDrawable(getResources().getDrawable(images[4]));
+		attachClickHandler(image0, longTitles[4], blobs[4], images[4]);
+
 		
 		title0.setText(titles[0]);
 		title1.setText(titles[1]);
 		title2.setText(titles[2]);
 		title3.setText(titles[3]);
 		title4.setText(titles[4]);
+	}
+	
+	public void attachClickHandler(ImageButton button, String title, String text, int image)
+	{
+		
+		final int sendImage = image;
+		final String sendTitle = title;
+		final String sendText = text;
+		button.setOnClickListener(new OnClickListener() {
+			 
+			@Override
+			public void onClick(View arg0) {
+				Intent intent = new Intent(ExhibitActivity.this, DetailedActivity.class);
+			    intent.putExtra("EXHIBIT_IMAGE", sendImage);
+			    intent.putExtra("EXHIBIT_TITLE", sendTitle);
+			    intent.putExtra("EXHIBIT_TEXT", sendText);
+				startActivity(intent);
+				
+			}
+ 
+		});
 	}
 }

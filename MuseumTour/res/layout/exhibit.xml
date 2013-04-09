@@ -26,7 +26,7 @@
 			android:src="@drawable/academic1">
 		</ImageButton>
 		<TextView
-			android:id="@+id/exhibit_text0"
+			android:id="@+id/exhibit_title0"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="TextView"
@@ -50,7 +50,7 @@
 			android:src="@drawable/academic1">
 		</ImageButton>
 		<TextView
-			android:id="@+id/exhibit_text1"
+			android:id="@+id/exhibit_title1"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="TextView"
@@ -79,7 +79,7 @@
 			android:src="@drawable/academic1">
 		</ImageButton>
 		<TextView
-			android:id="@+id/exhibit_text2"
+			android:id="@+id/exhibit_title2"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="TextView"
@@ -103,7 +103,7 @@
 			android:src="@drawable/academic1">
 		</ImageButton>
 		<TextView
-			android:id="@+id/exhibit_text3"
+			android:id="@+id/exhibit_title3"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="TextView"
@@ -132,7 +132,7 @@
 			android:src="@drawable/academic1">
 		</ImageButton>
 		<TextView
-			android:id="@+id/exhibit_text4"
+			android:id="@+id/exhibit_title4"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="TextView"
