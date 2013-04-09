@@ -19,8 +19,7 @@
         android:layout_alignParentRight="true"
         
         android:scrollbars="vertical"
-        android:text="TextView"
-        android:visibility="invisible" />
+        android:text="TextView" />
 
     <ImageView
         android:id="@+id/exhibit_image"
@@ -28,8 +27,7 @@
         android:layout_height="200dip"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:src="@drawable/scan_icon"
-        android:visibility="invisible" />
+        android:src="@drawable/scan_icon"/>
 
     <TextView
         android:id="@+id/exhibit_title"
@@ -38,6 +36,5 @@
         android:layout_below="@+id/exhibitPic"
         android:layout_centerHorizontal="true"
         android:text="TextView"
-        android:textSize="16dp"
-        android:visibility="invisible" />
+        android:textSize="16dp" />
 </RelativeLayout>

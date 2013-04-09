@@ -187,13 +187,13 @@ public class ExhibitActivity extends Activity {
 		image0.setImageDrawable(getResources().getDrawable(images[0]));
 		attachClickHandler(image0, longTitles[0], blobs[0], images[0]);
 		image1.setImageDrawable(getResources().getDrawable(images[1]));
-		attachClickHandler(image0, longTitles[1], blobs[1], images[1]);
+		attachClickHandler(image1, longTitles[1], blobs[1], images[1]);
 		image2.setImageDrawable(getResources().getDrawable(images[2]));
-		attachClickHandler(image0, longTitles[2], blobs[2], images[2]);
+		attachClickHandler(image2, longTitles[2], blobs[2], images[2]);
 		image3.setImageDrawable(getResources().getDrawable(images[3]));
-		attachClickHandler(image0, longTitles[3], blobs[3], images[3]);
+		attachClickHandler(image3, longTitles[3], blobs[3], images[3]);
 		image4.setImageDrawable(getResources().getDrawable(images[4]));
-		attachClickHandler(image0, longTitles[4], blobs[4], images[4]);
+		attachClickHandler(image4, longTitles[4], blobs[4], images[4]);
 
 		
 		title0.setText(titles[0]);

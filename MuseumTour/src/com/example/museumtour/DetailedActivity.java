@@ -24,7 +24,7 @@ public class DetailedActivity extends Activity {
 	    
 	}
 	public void setImage(int image){
-		ImageView imageView = (ImageView)findViewById(R.id.exhibit_image0);
+		ImageView imageView = (ImageView)findViewById(R.id.exhibit_image);
 		imageView.setImageDrawable(getResources().getDrawable(image));
 	}
 	
