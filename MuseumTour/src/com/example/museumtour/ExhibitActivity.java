@@ -8,7 +8,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
-import android.widget.ImageView;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class ExhibitActivity extends Activity {
@@ -40,8 +40,8 @@ public class ExhibitActivity extends Activity {
 	    	longTitles[i] = allLongTitles[i+exhibitIndex*5];
 	    	textBlobs[i] = allTextBlobs[i+exhibitIndex*5];
 	    }
-	    setImagesAndText(images, shortTitles);
 	    setContentView(R.layout.exhibit);
+	    setImagesAndText(images, shortTitles);
 	}
 	
 	public int getExhibitIndex(String exhibitName){
@@ -170,11 +170,11 @@ public class ExhibitActivity extends Activity {
 
 	public void setImagesAndText(int[] images, String[] titles)
 	{
-		ImageView image0 = (ImageView)findViewById(R.id.exhibit_image0);
-		ImageView image1 = (ImageView)findViewById(R.id.exhibit_image1);
-		ImageView image2 = (ImageView)findViewById(R.id.exhibit_image2);
-		ImageView image3 = (ImageView)findViewById(R.id.exhibit_image3);
-		ImageView image4 = (ImageView)findViewById(R.id.exhibit_image4);
+		ImageButton image0 = (ImageButton)findViewById(R.id.exhibit_image0);
+		ImageButton image1 = (ImageButton)findViewById(R.id.exhibit_image1);
+		ImageButton image2 = (ImageButton)findViewById(R.id.exhibit_image2);
+		ImageButton image3 = (ImageButton)findViewById(R.id.exhibit_image3);
+		ImageButton image4 = (ImageButton)findViewById(R.id.exhibit_image4);
 		
 		TextView title0 = (TextView)findViewById(R.id.exhibit_title0);
 		TextView title1 = (TextView)findViewById(R.id.exhibit_title1);

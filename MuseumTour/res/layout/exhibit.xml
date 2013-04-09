@@ -1,11 +1,14 @@
-<?xml version="1.0" encoding="utf-8"?>  
 <TableLayout  
-    xmlns:android="http://schemas.android.com/apk/res/android"  
-    android:id="@+id/tableLayout1"  
-    android:layout_width="match_parent"  
-    android:layout_height="match_parent"  
-    android:shrinkColumns="*"  
-    android:stretchColumns="*">   
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:visibility="visible"
+    tools:context=".ExhibitActivity" >   
     <TableRow  
         android:layout_height="wrap_content"  
         android:id="@+id/tableRow0"  
@@ -26,7 +29,7 @@
 			android:src="@drawable/academic1">
 		</ImageButton>
 		<TextView
-			android:id="@+id/exhibit_text0"
+			android:id="@+id/exhibit_title0"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="TextView"
@@ -50,7 +53,7 @@
 			android:src="@drawable/academic1">
 		</ImageButton>
 		<TextView
-			android:id="@+id/exhibit_text1"
+			android:id="@+id/exhibit_title1"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="TextView"
@@ -79,7 +82,7 @@
 			android:src="@drawable/academic1">
 		</ImageButton>
 		<TextView
-			android:id="@+id/exhibit_text2"
+			android:id="@+id/exhibit_title2"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="TextView"
@@ -103,7 +106,7 @@
 			android:src="@drawable/academic1">
 		</ImageButton>
 		<TextView
-			android:id="@+id/exhibit_text3"
+			android:id="@+id/exhibit_title3"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="TextView"
@@ -132,7 +135,7 @@
 			android:src="@drawable/academic1">
 		</ImageButton>
 		<TextView
-			android:id="@+id/exhibit_text4"
+			android:id="@+id/exhibit_title4"
 			android:layout_width="wrap_content"
 			android:layout_height="wrap_content"
 			android:text="TextView"
