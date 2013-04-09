@@ -13,19 +13,28 @@
     <ListView
         android1:id="@+id/achievementsChecklist"
         android1:layout_width="match_parent"
-        android1:layout_height="300dip"
-        android1:layout_alignParentLeft="true"
-        android1:layout_alignParentTop="true" >
+        android1:layout_height="400dip"
+        android1:layout_alignLeft="@+id/progressBar1"
+        android1:layout_alignParentBottom="true"
+        android1:layout_alignRight="@+id/progressBar1" >
+
     </ListView>
+
+    <TextView
+        android1:id="@+id/textView1"
+        android1:layout_width="wrap_content"
+        android1:layout_height="wrap_content"
+        android1:layout_alignLeft="@+id/progressBar1"
+        android1:layout_alignParentTop="true"
+        android1:text="Progress" />
 
     <ProgressBar
         android1:id="@+id/progressBar1"
         style="?android:attr/progressBarStyleHorizontal"
         android1:layout_width="wrap_content"
         android1:layout_height="wrap_content"
-        android1:layout_alignParentBottom="true"
         android1:layout_alignParentLeft="true"
         android1:layout_alignParentRight="true"
-        android1:layout_marginBottom="19dp" />
+        android1:layout_below="@+id/textView1" />
 	
 </RelativeLayout>
