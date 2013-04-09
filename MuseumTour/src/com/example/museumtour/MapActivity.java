@@ -1,7 +1,6 @@
 package com.example.museumtour;
 
-import com.google.zxing.integration.android.IntentIntegrator;
-import com.google.zxing.integration.android.IntentResult;
+import java.util.List;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,8 +8,11 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 public class MapActivity extends Activity {
-	
+	static boolean[] exhibitsVisited = {false, false, false, false, false, false, false, false, false, false};
 	TextView contents=null;
 
 	@Override
@@ -21,6 +23,7 @@ public class MapActivity extends Activity {
 	    Intent intent = getIntent();
 	    setContentView(R.layout.map);
 	    contents=(TextView)findViewById(R.id.contents);
+	    
 	}
 	
 	public void doScan(View v) {
@@ -114,5 +117,23 @@ public class MapActivity extends Activity {
 		if (exhibit.equals("uniquely")) {
 			map.setImageDrawable(getResources().getDrawable(R.drawable.map_uniquely));
 		}
+	}
+	
+	public static void setExhibitVisited(int exhibitIndex){
+		exhibitsVisited[exhibitIndex] = true;
+	}
+	
+	public static boolean isVisited(int exhibitIndex){
+		return exhibitsVisited[exhibitIndex];
+	}
+	
+	public static int getNumberOfVisitedExhibits(){
+		int sum = 0;
+		for(int i=0; i<10;i++){
+			if(exhibitsVisited[i]){
+				sum++;
+			}
+		}
+		return sum;
 	}
 }
