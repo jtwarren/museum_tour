@@ -8,6 +8,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 public class ExhibitActivity extends Activity {
 
@@ -34,11 +36,11 @@ public class ExhibitActivity extends Activity {
 	    String[] allTextBlobs = res.getStringArray(R.array.exhibit_text);
 	    for(int i=0; i<5; i++)
 	    {
-	    	shortTitles[i] = allShortTitles[i+exhibitIndex];
-	    	longTitles[i] = allLongTitles[i+exhibitIndex];
-	    	textBlobs[i] = allTextBlobs[i+exhibitIndex];
+	    	shortTitles[i] = allShortTitles[i+exhibitIndex*5];
+	    	longTitles[i] = allLongTitles[i+exhibitIndex*5];
+	    	textBlobs[i] = allTextBlobs[i+exhibitIndex*5];
 	    }
-	    
+	    setImagesAndText(images, shortTitles);
 	    setContentView(R.layout.exhibit);
 	}
 	
@@ -164,5 +166,32 @@ public class ExhibitActivity extends Activity {
 			break;
 		}
 		return tempImages;
+	}
+
+	public void setImagesAndText(int[] images, String[] titles)
+	{
+		ImageView image0 = (ImageView)findViewById(R.id.exhibit_image0);
+		ImageView image1 = (ImageView)findViewById(R.id.exhibit_image1);
+		ImageView image2 = (ImageView)findViewById(R.id.exhibit_image2);
+		ImageView image3 = (ImageView)findViewById(R.id.exhibit_image3);
+		ImageView image4 = (ImageView)findViewById(R.id.exhibit_image4);
+		
+		TextView title0 = (TextView)findViewById(R.id.exhibit_title0);
+		TextView title1 = (TextView)findViewById(R.id.exhibit_title1);
+		TextView title2 = (TextView)findViewById(R.id.exhibit_title2);
+		TextView title3 = (TextView)findViewById(R.id.exhibit_title3);
+		TextView title4 = (TextView)findViewById(R.id.exhibit_title4);
+		
+		image0.setImageDrawable(getResources().getDrawable(images[0]));
+		image1.setImageDrawable(getResources().getDrawable(images[1]));
+		image2.setImageDrawable(getResources().getDrawable(images[2]));
+		image3.setImageDrawable(getResources().getDrawable(images[3]));
+		image4.setImageDrawable(getResources().getDrawable(images[4]));
+		
+		title0.setText(titles[0]);
+		title1.setText(titles[1]);
+		title2.setText(titles[2]);
+		title3.setText(titles[3]);
+		title4.setText(titles[4]);
 	}
 }
