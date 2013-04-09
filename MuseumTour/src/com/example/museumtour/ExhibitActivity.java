@@ -42,8 +42,8 @@ public class ExhibitActivity extends Activity {
 	    	longTitles[i] = allLongTitles[i+exhibitIndex*5];
 	    	textBlobs[i] = allTextBlobs[i+exhibitIndex*5];
 	    }
-	    setImagesAndText(images, shortTitles, textBlobs, longTitles);
 	    setContentView(R.layout.exhibit);
+	    setImagesAndText(images, shortTitles, textBlobs, longTitles);
 	}
 	
 	public int getExhibitIndex(String exhibitName){
