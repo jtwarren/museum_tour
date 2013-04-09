@@ -206,7 +206,7 @@ public class ExhibitActivity extends Activity {
 		attachClickHandler(image3, longTitles[3], blobs[3], images[3]);
 		image4.setImageDrawable(getResources().getDrawable(images[4]));
 		attachClickHandler(image4, longTitles[4], blobs[4], images[4]);
-		image4.setImageDrawable(getResources().getDrawable(images[5]));
+		image5.setImageDrawable(getResources().getDrawable(images[5]));
 		attachClickHandler(image5, longTitles[5], blobs[5], images[5]);
 
 		
@@ -215,7 +215,7 @@ public class ExhibitActivity extends Activity {
 		title2.setText(titles[2]);
 		title3.setText(titles[3]);
 		title4.setText(titles[4]);
-		title4.setText(titles[5]);
+		title5.setText(titles[5]);
 	}
 	
 	public void attachClickHandler(ImageButton button, String title, String text, int image)
