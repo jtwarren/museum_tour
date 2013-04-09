@@ -3,6 +3,7 @@ package com.example.museumtour;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,6 +37,7 @@ public class DetailedActivity extends Activity {
 	public void setText(String text){
 		TextView textView = (TextView)findViewById(R.id.exhibit_text);
 		textView.setText(text);
+		textView.setMovementMethod(new ScrollingMovementMethod());
 	}
 
 }

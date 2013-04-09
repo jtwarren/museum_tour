@@ -13,11 +13,10 @@
 	<TextView
         android:id="@+id/exhibit_text"
         android:layout_width="wrap_content"
-        android:layout_height="180dip"
+        android:layout_height="240dip"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentRight="true"
-        
         android:scrollbars="vertical"
         android:text="TextView" />
 
@@ -33,8 +32,8 @@
         android:id="@+id/exhibit_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/exhibitPic"
+        android:layout_below="@+id/exhibit_image"
         android:layout_centerHorizontal="true"
-        android:text="TextView"
-        android:textSize="16dp" />
+        android:text="TextVsdsddddddddddddddddddddiew"
+        android:textSize="18dp" />
 </RelativeLayout>

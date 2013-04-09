@@ -28,19 +28,19 @@ public class ExhibitActivity extends Activity {
 	    Intent intent = getIntent();
 	    String exhibitName = intent.getStringExtra("EXHIBIT_NAME");
 	    int exhibitIndex = getExhibitIndex(exhibitName);
-	    shortTitles = new String[5];
-	    longTitles = new String[5];
-	    textBlobs = new String[5];
+	    shortTitles = new String[6];
+	    longTitles = new String[6];
+	    textBlobs = new String[6];
 	    images = getExhibitImages(exhibitIndex);
 	    Resources res = getResources();
 	    String[] allLongTitles = res.getStringArray(R.array.exhibit_names);
 	    String[] allShortTitles = res.getStringArray(R.array.short_exhibit_names);
 	    String[] allTextBlobs = res.getStringArray(R.array.exhibit_text);
-	    for(int i=0; i<5; i++)
+	    for(int i=0; i<6; i++)
 	    {
-	    	shortTitles[i] = allShortTitles[i+exhibitIndex*5];
-	    	longTitles[i] = allLongTitles[i+exhibitIndex*5];
-	    	textBlobs[i] = allTextBlobs[i+exhibitIndex*5];
+	    	shortTitles[i] = allShortTitles[i+exhibitIndex*6];
+	    	longTitles[i] = allLongTitles[i+exhibitIndex*6];
+	    	textBlobs[i] = allTextBlobs[i+exhibitIndex*6];
 	    }
 	    setContentView(R.layout.exhibit);
 	    setImagesAndText(images, shortTitles, textBlobs, longTitles);
@@ -92,7 +92,7 @@ public class ExhibitActivity extends Activity {
 	}
 	
 	public int[] getExhibitImages(int exhibitIndex){
-		int[] tempImages = new int[5];
+		int[] tempImages = new int[6];
 		switch(exhibitIndex)
 		{
 		case 0:
@@ -101,6 +101,7 @@ public class ExhibitActivity extends Activity {
 			tempImages[2] = R.drawable.academic2;
 			tempImages[3] = R.drawable.academic3;
 			tempImages[4] = R.drawable.academic4;
+			tempImages[5] = R.drawable.academic5;
 			break;
 		case 1:
 			tempImages[0] = R.drawable.analog0;
@@ -108,6 +109,7 @@ public class ExhibitActivity extends Activity {
 			tempImages[2] = R.drawable.analog2;
 			tempImages[3] = R.drawable.analog3;
 			tempImages[4] = R.drawable.analog4;
+			tempImages[5] = R.drawable.analog5;
 			break;
 		case 2:
 			tempImages[0] = R.drawable.artistic0;
@@ -115,6 +117,7 @@ public class ExhibitActivity extends Activity {
 			tempImages[2] = R.drawable.artistic2;
 			tempImages[3] = R.drawable.artistic3;
 			tempImages[4] = R.drawable.artistic4;
+			tempImages[5] = R.drawable.artistic5;
 			break;
 		case 3:
 			tempImages[0] = R.drawable.bionic0;
@@ -122,6 +125,7 @@ public class ExhibitActivity extends Activity {
 			tempImages[2] = R.drawable.bionic2;
 			tempImages[3] = R.drawable.bionic3;
 			tempImages[4] = R.drawable.bionic4;
+			tempImages[5] = R.drawable.bionic5;
 			break;
 		case 4:
 			tempImages[0] = R.drawable.boston0;
@@ -129,6 +133,7 @@ public class ExhibitActivity extends Activity {
 			tempImages[2] = R.drawable.boston2;
 			tempImages[3] = R.drawable.boston3;
 			tempImages[4] = R.drawable.boston4;
+			tempImages[5] = R.drawable.boston5;
 			break;
 		case 5:
 			tempImages[0] = R.drawable.broadcasting0;
@@ -136,6 +141,7 @@ public class ExhibitActivity extends Activity {
 			tempImages[2] = R.drawable.broadcasting2;
 			tempImages[3] = R.drawable.broadcasting3;
 			tempImages[4] = R.drawable.broadcasting4;
+			tempImages[5] = R.drawable.broadcasting5;
 			break;
 		case 6:
 			tempImages[0] = R.drawable.entrepreneurship0;
@@ -143,6 +149,7 @@ public class ExhibitActivity extends Activity {
 			tempImages[2] = R.drawable.entrepreneurship2;
 			tempImages[3] = R.drawable.entrepreneurship3;
 			tempImages[4] = R.drawable.entrepreneurship4;
+			tempImages[5] = R.drawable.entrepreneurship5;
 			break;
 		case 7:
 			tempImages[0] = R.drawable.pioneering0;
@@ -150,6 +157,7 @@ public class ExhibitActivity extends Activity {
 			tempImages[2] = R.drawable.pioneering2;
 			tempImages[3] = R.drawable.pioneering3;
 			tempImages[4] = R.drawable.pioneering4;
+			tempImages[5] = R.drawable.pioneering5;
 			break;
 		case 8:
 			tempImages[0] = R.drawable.problem0;
@@ -157,6 +165,7 @@ public class ExhibitActivity extends Activity {
 			tempImages[2] = R.drawable.problem2;
 			tempImages[3] = R.drawable.problem3;
 			tempImages[4] = R.drawable.problem4;
+			tempImages[5] = R.drawable.problem5;
 			break;
 		case 9:
 			tempImages[0] = R.drawable.uniquely0;
@@ -164,6 +173,7 @@ public class ExhibitActivity extends Activity {
 			tempImages[2] = R.drawable.uniquely2;
 			tempImages[3] = R.drawable.uniquely3;
 			tempImages[4] = R.drawable.uniquely4;
+			tempImages[5] = R.drawable.uniquely5;
 			break;
 		default:
 			break;
@@ -178,12 +188,14 @@ public class ExhibitActivity extends Activity {
 		ImageButton image2 = (ImageButton)findViewById(R.id.exhibit_image2);
 		ImageButton image3 = (ImageButton)findViewById(R.id.exhibit_image3);
 		ImageButton image4 = (ImageButton)findViewById(R.id.exhibit_image4);
-		
+		ImageButton image5 = (ImageButton)findViewById(R.id.exhibit_image5);
+
 		TextView title0 = (TextView)findViewById(R.id.exhibit_title0);
 		TextView title1 = (TextView)findViewById(R.id.exhibit_title1);
 		TextView title2 = (TextView)findViewById(R.id.exhibit_title2);
 		TextView title3 = (TextView)findViewById(R.id.exhibit_title3);
 		TextView title4 = (TextView)findViewById(R.id.exhibit_title4);
+		TextView title5 = (TextView)findViewById(R.id.exhibit_title5);
 		
 		image0.setImageDrawable(getResources().getDrawable(images[0]));
 		attachClickHandler(image0, longTitles[0], blobs[0], images[0]);
@@ -195,6 +207,8 @@ public class ExhibitActivity extends Activity {
 		attachClickHandler(image3, longTitles[3], blobs[3], images[3]);
 		image4.setImageDrawable(getResources().getDrawable(images[4]));
 		attachClickHandler(image4, longTitles[4], blobs[4], images[4]);
+		image5.setImageDrawable(getResources().getDrawable(images[5]));
+		attachClickHandler(image5, longTitles[5], blobs[5], images[5]);
 
 		
 		title0.setText(titles[0]);
@@ -202,6 +216,7 @@ public class ExhibitActivity extends Activity {
 		title2.setText(titles[2]);
 		title3.setText(titles[3]);
 		title4.setText(titles[4]);
+		title5.setText(titles[5]);
 	}
 	
 	public void attachClickHandler(ImageButton button, String title, String text, int image)
