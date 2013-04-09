@@ -28,9 +28,9 @@ public class ExhibitActivity extends Activity {
 	    Intent intent = getIntent();
 	    String exhibitName = intent.getStringExtra("EXHIBIT_NAME");
 	    int exhibitIndex = getExhibitIndex(exhibitName);
-	    shortTitles = new String[5];
-	    longTitles = new String[5];
-	    textBlobs = new String[5];
+	    shortTitles = new String[6];
+	    longTitles = new String[6];
+	    textBlobs = new String[6];
 	    images = getExhibitImages(exhibitIndex);
 	    Resources res = getResources();
 	    String[] allLongTitles = res.getStringArray(R.array.exhibit_names);
@@ -91,7 +91,7 @@ public class ExhibitActivity extends Activity {
 	}
 	
 	public int[] getExhibitImages(int exhibitIndex){
-		int[] tempImages = new int[5];
+		int[] tempImages = new int[6];
 		switch(exhibitIndex)
 		{
 		case 0:
