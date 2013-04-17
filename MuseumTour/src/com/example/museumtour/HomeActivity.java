@@ -1,6 +1,8 @@
 package com.example.museumtour;
 
+import java.util.Arrays;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 
@@ -10,6 +12,7 @@ import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Spinner;
@@ -33,7 +36,7 @@ public class HomeActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home);
 		
-//		populateMuseumSelectionList(Arrays.asList(museums));
+		populateMuseumSelectionList(Arrays.asList(museums));
 //		contents=(TextView)findViewById(R.id.contents);
 //		res = getResources();
 //		
@@ -56,16 +59,16 @@ public class HomeActivity extends Activity {
 		return true;
 	}
 	
-//	public void populateMuseumSelectionList(List<String> museums) {
-//		 
-//		museumSelectionSpinner = (Spinner) findViewById(R.id.museumSelectionSpinner);
-//		
-//		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
-//			android.R.layout.simple_spinner_item, museums);
-//		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//		museumSelectionSpinner.setAdapter(dataAdapter);
-//	  }
-//	
+	public void populateMuseumSelectionList(List<String> museums) {
+		 
+		museumSelectionSpinner = (Spinner) findViewById(R.id.museumSelectionSpinner);
+		
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this,
+			android.R.layout.simple_spinner_item, museums);
+		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		museumSelectionSpinner.setAdapter(dataAdapter);
+	  }
+	
 	public void beginTour(View view){
 		Intent intent = new Intent(this, MapActivity.class);
 		startActivity(intent);
